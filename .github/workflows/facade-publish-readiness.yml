@@ -21,7 +21,7 @@ jobs:
         use-diagnostic-code use-diagnostic-level use-diagnostic-message use-diagnostic-span use-diagnostic-label use-diagnostic-report
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install stable Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
