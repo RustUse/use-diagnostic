@@ -1,0 +1,47 @@
+[workspace]
+members = [
+    "crates/use-diagnostic",
+    "crates/use-diagnostic-code",
+    "crates/use-diagnostic-level",
+    "crates/use-diagnostic-message",
+    "crates/use-diagnostic-span",
+    "crates/use-diagnostic-label",
+    "crates/use-diagnostic-report",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-diagnostic"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-diagnostic = { version = "0.0.1", path = "crates/use-diagnostic" }
+use-diagnostic-code = { version = "0.0.1", path = "crates/use-diagnostic-code" }
+use-diagnostic-label = { version = "0.0.1", path = "crates/use-diagnostic-label" }
+use-diagnostic-level = { version = "0.0.1", path = "crates/use-diagnostic-level" }
+use-diagnostic-message = { version = "0.0.1", path = "crates/use-diagnostic-message" }
+use-diagnostic-report = { version = "0.0.1", path = "crates/use-diagnostic-report" }
+use-diagnostic-span = { version = "0.0.1", path = "crates/use-diagnostic-span" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-diagnostic-code",
+    "use-diagnostic-level",
+    "use-diagnostic-message",
+    "use-diagnostic-span",
+    "use-diagnostic-label",
+    "use-diagnostic-report",
+    "use-diagnostic",
+]

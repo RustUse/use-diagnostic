@@ -1,0 +1,25 @@
+[package]
+name = "use-diagnostic-label"
+description = "Renderer-neutral diagnostic label primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-diagnostic-label"
+keywords = ["diagnostic", "label", "span", "message", "rustuse"]
+categories = ["development-tools", "data-structures"]
+
+[dependencies]
+use-diagnostic-message.workspace = true
+use-diagnostic-span.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

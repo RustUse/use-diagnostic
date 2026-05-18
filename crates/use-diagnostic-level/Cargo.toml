@@ -1,0 +1,21 @@
+[package]
+name = "use-diagnostic-level"
+description = "Diagnostic severity primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-diagnostic-level"
+keywords = ["diagnostic", "level", "severity", "warning", "rustuse"]
+categories = ["development-tools", "data-structures"]
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
