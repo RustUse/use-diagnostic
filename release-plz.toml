@@ -1,0 +1,69 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-diagnostic-code"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic-level"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic-message"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic-span"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic-label"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic-report"
+release = true
+version_group = "rustuse-diagnostic"
+
+[[package]]
+name = "use-diagnostic"
+release = true
+version_group = "rustuse-diagnostic"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-diagnostic-code",
+  "use-diagnostic-level",
+  "use-diagnostic-message",
+  "use-diagnostic-span",
+  "use-diagnostic-label",
+  "use-diagnostic-report",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

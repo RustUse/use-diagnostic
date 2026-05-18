@@ -57,7 +57,7 @@ impl fmt::Display for DiagnosticPositionError {
             Self::ZeroLine => formatter.write_str("diagnostic position line must be at least 1"),
             Self::ZeroColumn => {
                 formatter.write_str("diagnostic position column must be at least 1")
-            }
+            },
         }
     }
 }
