@@ -19,7 +19,7 @@ pub struct Diagnostic {
 impl Diagnostic {
     /// Creates a diagnostic with a level and message.
     #[must_use]
-    pub fn new(level: DiagnosticLevel, message: DiagnosticMessage) -> Self {
+    pub const fn new(level: DiagnosticLevel, message: DiagnosticMessage) -> Self {
         Self {
             code: None,
             level,
@@ -62,7 +62,7 @@ impl Diagnostic {
 
     /// Returns the optional diagnostic code.
     #[must_use]
-    pub fn code(&self) -> Option<&DiagnosticCode> {
+    pub const fn code(&self) -> Option<&DiagnosticCode> {
         self.code.as_ref()
     }
 
@@ -113,13 +113,13 @@ impl DiagnosticReport {
 
     /// Returns the number of diagnostics in the report.
     #[must_use]
-    pub fn len(&self) -> usize {
+    pub const fn len(&self) -> usize {
         self.diagnostics.len()
     }
 
     /// Returns `true` when the report contains no diagnostics.
     #[must_use]
-    pub fn is_empty(&self) -> bool {
+    pub const fn is_empty(&self) -> bool {
         self.diagnostics.is_empty()
     }
 
@@ -176,6 +176,15 @@ impl FromIterator<Diagnostic> for DiagnosticReport {
         Self {
             diagnostics: diagnostics.into_iter().collect(),
         }
+    }
+}
+
+impl<'a> IntoIterator for &'a DiagnosticReport {
+    type Item = &'a Diagnostic;
+    type IntoIter = core::slice::Iter<'a, Diagnostic>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.iter()
     }
 }
 

@@ -1,6 +1,6 @@
 # use-diagnostic-report
 
-Simple diagnostic and diagnostic report primitives for RustUse.
+Simple diagnostic and diagnostic report primitives for `RustUse`.
 
 ## Foundation
 

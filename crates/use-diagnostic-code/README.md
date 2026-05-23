@@ -1,6 +1,6 @@
 # use-diagnostic-code
 
-Stable diagnostic identifier primitives for RustUse.
+Stable diagnostic identifier primitives for `RustUse`.
 
 ## Foundation
 

@@ -1,6 +1,6 @@
 # use-diagnostic-span
 
-Generic diagnostic source and span primitives for RustUse.
+Generic diagnostic source and span primitives for `RustUse`.
 
 ## Foundation
 

@@ -99,7 +99,7 @@ impl DiagnosticLabel {
 
     /// Returns the optional label span.
     #[must_use]
-    pub fn span(&self) -> Option<&DiagnosticSpan> {
+    pub const fn span(&self) -> Option<&DiagnosticSpan> {
         self.span.as_ref()
     }
 }

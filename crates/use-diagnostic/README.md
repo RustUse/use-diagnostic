@@ -1,6 +1,6 @@
 # use-diagnostic
 
-Facade crate for RustUse diagnostic primitives.
+Facade crate for `RustUse` diagnostic primitives.
 
 `use-diagnostic` reexports the focused crates in the diagnostic set. It is a primitive vocabulary for codes, levels, messages, spans, labels, diagnostics, and reports.
 

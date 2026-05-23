@@ -1,6 +1,6 @@
 # use-diagnostic-level
 
-Diagnostic severity primitives for RustUse.
+Diagnostic severity primitives for `RustUse`.
 
 ## Foundation
 

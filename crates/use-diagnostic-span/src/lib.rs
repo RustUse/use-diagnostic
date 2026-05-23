@@ -187,7 +187,7 @@ impl DiagnosticSpan {
 
     /// Returns the optional source identifier.
     #[must_use]
-    pub fn source(&self) -> Option<&DiagnosticSourceId> {
+    pub const fn source(&self) -> Option<&DiagnosticSourceId> {
         self.source.as_ref()
     }
 

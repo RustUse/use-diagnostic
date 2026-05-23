@@ -1,6 +1,6 @@
 # use-diagnostic-message
 
-Plain-text diagnostic message primitives for RustUse.
+Plain-text diagnostic message primitives for `RustUse`.
 
 ## Foundation
 

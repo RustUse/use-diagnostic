@@ -1,6 +1,6 @@
 # use-diagnostic-label
 
-Renderer-neutral diagnostic label primitives for RustUse.
+Renderer-neutral diagnostic label primitives for `RustUse`.
 
 ## Foundation
 
